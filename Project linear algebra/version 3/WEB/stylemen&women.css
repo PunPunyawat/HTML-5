@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    /* font-size: 100%; */
+    transition: .5s;
+}
+
+.container {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.headmen{
+    position: relative;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    block-size: 20vh;
+    /* overflow: hidden; */
+    top : 0; left:0; right: 0 ;
+    z-index: 10;  
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;   /*  ให้กล่องข้อความนั้นจัดแบบคอลัม */
+}
+
+.headmen h1{
+    /* margin-top: 6vh; */
+    /* margin-bottom: 1vh;   ดัน  is data of all ลงมา*/
+    /* right: 100; */
+    font-size: 10vh;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+.headmen h2{
+    color: white;
+    font-size: 2rem;
+    /* text-align: center; */
+    /* margin-bottom: 2vh; */
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+.toupweb a{
+    font-family: 'Montserrat', sans-serif;
+    position: fixed; 
+    z-index: 10;
+    padding: 0.7rem 0.7rem;
+    text-decoration: none;
+    border-radius: 20px;
+    border: black 2ex;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+    /* background-size: cover; */
+    cursor: pointer; 
+    bottom : 2vh;  /*ให้ลงไปอยู่ด้านล่าง ห่างจากล่าง 2vh*/
+     right: 2vh;   /*ให้ไปอยู่ด้านขวา ห่างทางขวา 2 vh */  
+  
+}
+
+.toupweb a:hover{
+    background-color: rgb(197, 191, 191);
+    color: black;
+    font-size: 1.7rem;
+}
+
+
+.maindata{
+    /* padding-top: 22vh;  */
+    top: 0;
+    position: sticky;    /* ให้ tab menu ติดกับกรอบบนไว้*/
+}
+
+
+.allmenu{
+    position: sticky;
+    width: 100%;
+}
+
+
+.maindata ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;    
+    background-color: #333333;
+    text-align: center;
+    z-index: 100;
+}
+
+/*หน้าจอเล็กว่า 650px ทำอันนี้*/
+.maindata li{
+    font-size: 1.8rem;
+    line-height: 40px;
+}
+
+.maindata a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    /* padding-left: 10px;  */
+    transition: 0.2s;
+}
+
+.maindata a:hover{
+    background-color: tomato;
+}
+
+.maindata li li{   /* ข้างใน sub menu*/
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+/* ปรับขนาดจามหน้าจอ */
+@media screen and (min-width: 650px){
+    .maindata li{
+        width: 220px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 1.4rem;
+        display: inline-block;  /* ให้กล่องมาวางต่อกันเป็นแถว */
+    }
+    .maindata > ul > li{
+        text-align: center;
+    }
+    
+    /* sub menu */
+    .maindata li ul{
+        position: absolute;
+        display: none;
+        width: inherit;
+    }
+
+    .maindata li:hover ul{
+        display: block;
+        background-color: #5e5e5e;
+        
+    }
+    /* ทำ block ให้เท่า ของ sub menu */
+    .maindata li ul li{
+        display: block;
+    }
+}
+
+
+.docdata {
+    display: block;
+    margin: auto auto;  /* margin จะมาจัดอยู่ตรงกลาง*/
+    width: 95%;
+    background-color:lightskyblue;  /* ความกว้างของ docdata*/
+}
+
+.docdata-row{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ส่วนของข้อมูล */
+.docdata li ul{
+    background-color: oldlace;
+    font-size: 1.3rem;    /* ปรับไซต์ทั้งหมดของ docdata*/
+    margin-top: 6vh;
+} 
+
+.docdata h2 {
+    color: brown;
+    /* background-color:red;  */
+}
+
+.docdata h3 p{
+    color: red;
+    /* background-color: brown; */
+}
+
+.docdata h3{
+    /* background-color: blue; */
+    color: blue;
+}
+
+.container-1{
+    background-color: royalblue;
+    display: block;
+    margin: auto auto;
+    width: 65vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+}
+
+.w3-row{
+    display: flex;
+    flex-direction: row;
+    font-size: 1vh;
+}
+
+
+.item{
+    width: 100%;
+    height: 50px;  /* ความสูงของ item ( คือกล่องของสีทั้งหมด )  คืือปรับที่ item ได้เลยไซต์ทุดสีจะเปลี่ยนไป*/
+}
+
+/* สามารถเข้าถึงได้เลย โดย่แค่พิมส่วนนึงของ class นั้นมันก็จะใช้ร่วมกันทั้งหมดในคำที่เหมือนกัน */
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.yellow {
+    background-color: yellow;
+}
+
+.w3-col{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+@media screen and (min-width: 100px) and (max-width:1500px){
+    .container-1{
+        width: 98vw;
+    }
+}
+
+@media screen and (min-width : 100px ) and (max-width:1000px){
+    .w3-row{
+        flex-direction: column;
+    }
+}
+
+
+/*-------------------------- ข้อมูล  ทางขวา ----------------------------*/    
+.container-data{
+    display: block;
+    margin: auto auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+}
+
+.men_women{
+    /* background-color: rgb(199, 210, 231); */
+    display: flex;
+    flex-flow: column;
+}
+
+.flexlayout{
+    display: flex;
+    margin-bottom: 5vh;
+}
+
+.men_women h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    color: black;
+    text-align: right;
+    padding-right: 13vh;
+    padding-top:13vh ; 
+}
+
+.men_women p{
+    padding-top: 30px;
+    padding-right: 7vh;
+
+}
+
+.pic_menwomen{
+    display: flex;
+    /* width: 100; */
+    /* align-content: center; */
+    flex-flow: column;
+    margin-top: 10vh;
+    padding-left: 10vh;
+}
+
+.pic_menwomen img{
+    margin-bottom: 3vh;
+}
+
+.descrip_menwome img{
+    padding-left: 5vh;
+}
+
+
+
+/*-------------------------- ข้อมูล  ทางซ้าย ----------------------------*/  
+
+
+.descrip_menwome_left{
+    padding-left: 10vh;
+} 
+
+.pic_menwomen_left {
+    text-align: right;
+    padding-right: 20vh;
+    padding-top: 7vh;   
+}
+
+.descrip_menwome_left h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    color: black;
+    text-align:left;
+    padding-left: 4vh; 
+}
+
+
+
