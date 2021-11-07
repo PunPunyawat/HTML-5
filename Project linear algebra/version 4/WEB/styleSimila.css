@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    transition: .5s;
+}
+
+.container {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+/*------------------- ส่วนหัว -----------------------------*/
+.headmen{
+    position: relative;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("https://images.unsplash.com/photo-1591696205602-2f950c417cb9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;    /* ให้รูปมันคลุมทั้งแถว */
+    background-position: center;  
+    
+    block-size: 20vh;   /* ขนาดของกล่อง*/
+    z-index: 10;  
+
+    display: flex;
+    align-items: center;       /*  ให้ข้อความในแกน x อยู่ตรงกลาง */
+    justify-content: center;  /*  ให้ข้อความในแกน y อยู่ตรงกลาง */
+    flex-direction: column;   /*  ให้กล่องข้อความนั้นจัดแบบคอลัม */
+}
+
+
+.headmen h1{
+    font-size: 10vh;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+.headmen h2{
+    color: white;
+    font-size: 2rem;
+    text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+
+/*-------------------ปุ่ม top up-----------------------------*/
+
+.toupweb a{
+    font-family: 'Montserrat', sans-serif;
+    position: fixed; 
+    z-index: 10;
+    padding: 0.7rem 0.7rem;
+    text-decoration: none;
+    border-radius: 20px;
+    border: black 2ex;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+  
+    cursor: pointer; 
+    bottom : 2vh;  /*ให้ลงไปอยู่ด้านล่าง ห่างจากล่าง 2vh*/
+     right: 2vh;   /*ให้ไปอยู่ด้านขวา ห่างทางขวา 2 vh */  
+  
+}
+
+.toupweb a:hover{
+    background-color: rgb(197, 191, 191);
+    color: black;
+    font-size: 1.7rem;
+}
+
+
+/*----------------------------  ส่วนของ menu -------------------------------*/
+
+.maindata{
+    top: 0;  /* ให้ tab menu ติดกับกรอบบนไว้*/
+    position: sticky;    
+}
+
+
+.allmenu{
+    position: sticky;
+    width: 100%;
+}
+
+.maindata ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;    
+    background-color: #333333;
+    text-align: center;
+    z-index: 100;
+}
+
+/*หน้าจอเล็กว่า 650px ทำอันนี้*/
+.maindata li{
+    font-size: 1.8rem;
+    line-height: 40px;
+}
+
+.maindata a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.2s;
+}
+
+.maindata a:hover{
+    background-color: tomato;
+}
+
+.maindata li li{   /* ข้างใน sub menu*/
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* ปรับขนาดจามหน้าจอ */
+@media screen and (min-width: 650px){
+    .maindata li{
+        width: 220px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 1.4rem;
+        display: inline-block;  /* ให้กล่องมาวางต่อกันเป็นแถว */
+    }
+    .maindata > ul > li{
+        text-align: center;
+    }
+    
+    /* sub menu */
+    .maindata li ul{
+        position: absolute;
+        display: none;
+        width: inherit;
+    }
+
+    .maindata li:hover ul{
+        display: block;
+        background-color: #5e5e5e;
+        
+    }
+
+    /* ทำ block ให้เท่า ของ sub menu */
+    .maindata li ul li{
+        display: block;
+    }
+}
+
+
+/* ------------------------- data ทั้งหมด --------------------------------------*/
+
+.container-data{
+    display: block;
+    margin: auto auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.all-layout{   /*  flex องรวมให้เรียงเป็น column */
+    display: flex;
+    flex-flow: column;
+}
+
+.all-layout h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    color: black;
+    text-align: right;
+    padding-right: 13vh;
+    padding-top:13vh ; 
+}
+
+.all-layout p{
+    padding-top: 30px;
+    padding-right: 7vh;
+}
+
+
+.pic-all{
+   
+    padding-left: 10vh;
+    
+}
+
+.flexlayout{  /*  flex ข้างในของ all layout อีกรอบ เพิ่อจัดข้อความอยู่ซ้ายอยู่ขวา */
+    display: flex;
+    margin-top: 5vh;
+}
