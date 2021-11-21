@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?fami...|Oswald:300,400,700");
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+html{
+    font-size: 100%;
+}
+
+.container{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+
+    justify-content: center;
+    align-items: center;
+    background-image: url("pic_index.jpg");
+    background-position: center center;
+    background-repeat: no-repeat; /* ให้รู้ภาพซ้ำกันไหม */
+    background-size: cover; /* ให้ตามกรอบตอนบีบตัวลิ้ง  */
+    
+}
+
+body{
+    font-family: "Oswald",sans-serif;
+    color: black;
+    user-select: none; /*ไม่ให้ user มา คุลมข้อความได้*/
+}
+
+.item h1{  
+    text-align: center;
+    font-family: "Oswald",sans;
+    color: black;
+    font-weight: 2rem;
+    font-size: 6rem;
+    line-height: 17vh;  /*จะเว้นล่างข้อความตามที่เราใส่ไป*/
+    user-select: none;
+    padding-top: 5.7vh;
+    text-shadow: rgb(128, 123, 123) 0.1em 0.1em 0.1em;  /* เพิ่มเงาให้ตัวอักษร */
+    
+}
+
+h2{
+    font-family: "Oswald",sans;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: underline black;
+}
+
+p1.dacolor h4{ 
+    font-size: 1.3rem;
+    font-family: "Oswald",sans;  /* ชนิดฟ้อน */
+    padding: 2px;
+    letter-spacing: 1.25px;  /* บอกถึงความห่างของตัวอักษร */
+    user-select: none;
+    color:black;
+    text-shadow: white 0.1em 0.1em 0.1em;
+}
+
+p1.dacolor{
+
+  font-weight: 4rem;
+  text-align: center;  /* จัดตำแหน่งของข้อความ */
+  user-select: none;
+}
+
+.bttcr{
+    min-height: 17vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+
+}
+
+ button{
+
+    /* display: flex; ทำให้สามารถตั้งค่าภายในได้คือ 2 อันล่างนี้*/
+    /* การจัดข้อมูล ให้ตรงกลาง align : cen คือเส้ตในแนวตั้ง*/
+    /* การจัดข้อมูล ให้ตรงกลาง justi : cen คือเส้ตในแนวนอน*/
+    margin: 0 15px;
+    font-size: 1.7rem; 
+    padding: 10px 30px;
+    background: black;
+    border: none;
+    border: 3px solid black;
+    color:white;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+    cursor: pointer;  /*ทำให้ cusor เป็นรูปมือ */
+    /* text-shadow: white  0.1em 0.1em 0.3em; */
+    /* border-radius: 80px; */
+    /* box-shadow: black  0.1em 0.1em 0.2em; */
+}
+
+button::after{
+    content: "";   /*อารมเป็นกล่องข้อความ*/
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background: white;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: .4s; 
+}
+button:hover{
+    color:black; 
+    border: white;
+    z-index: 0;
+    text-shadow: none;
+    
+}
+button:hover::after{
+    width: 100% ;
+}
+
+
+.datasheet a{
+    display: flex;
+  
+    line-height: 5vh;
+    margin: 0 150px;
+    min-height: 5vh;
+    /* position: relative; */
+    align-content: center;
+    justify-content: center;
+    padding: 0 0;
+    color: white;
+    font-size: 20px;
+    /* border-radius: 30px; */
+    background-color: black;
+    font-weight: 700;
+    text-decoration: none;  /*เอาเส้นใต้ออก*/    
+}
+
+.datasheet a:hover{
+    background-color: white;   
+    color:black ;
+    
+   
+}
+
+.member h2{
+    font-family: "Oswald",sans;
+    text-align: center;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.member h3{
+    font-family: "Oswald",sans;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+/* ส่วนของ VDO */
+.vdo{
+    text-align: center;   
+}
+
+.descrip_vdo{
+    padding-top: 3vh;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: underline;
+    font-family: "Oswald",sans;
+    text-align: center; 
+    padding-bottom: 1vh;
+}
